@@ -77,3 +77,4 @@ The domain test command is runnable without a React Native device. Full dependen
 
 - 2026-09-12 — Initialized offline Expo/TypeScript scaffold, core trip engine, persistence boundary, initial UI, generated alarm/icon assets, focused docs, and domain tests.
 - 2026-09-12 — Corrected GPS plausibility test fixtures; all 7 domain tests pass. Full npm/Android validation is pending network access.
+# WOP-application
