@@ -43,7 +43,11 @@ export function hasTraveledDistance(
   current: Coordinate,
   targetMeters: number,
 ): boolean {
-  return Number.isFinite(targetMeters) && targetMeters > 0 && distanceMeters(start, current) >= targetMeters;
+  return (
+    Number.isFinite(targetMeters) &&
+    targetMeters > 0 &&
+    distanceMeters(start, current) >= targetMeters
+  );
 }
 
 /** Ignore implausible GPS jumps while allowing normal pedestrian/vehicle motion. */
@@ -55,12 +59,18 @@ export function isPlausibleSample(
   if (!previous) return true;
   const elapsedSeconds = (next.timestamp - previous.timestamp) / 1000;
   if (elapsedSeconds <= 0) return false;
-  const maxDistance = maxSpeedMetersPerSecond * elapsedSeconds + (next.accuracyMeters ?? 0) + (previous.accuracyMeters ?? 0);
+  const maxDistance =
+    maxSpeedMetersPerSecond * elapsedSeconds +
+    (next.accuracyMeters ?? 0) +
+    (previous.accuracyMeters ?? 0);
   return distanceMeters(previous, next) <= maxDistance;
 }
 
-export function formatDistance(meters: number, unit: 'km' | 'mi' = 'km'): string {
-  const value = unit === 'mi' ? meters / 1609.344 : meters / 1000;
+export function formatDistance(
+  meters: number,
+  unit: "km" | "mi" = "km",
+): string {
+  const value = unit === "mi" ? meters / 1609.344 : meters / 1000;
   if (value < 1) return `${Math.round(meters)} m`;
   return `${value.toFixed(value < 10 ? 1 : 0)} ${unit}`;
 }

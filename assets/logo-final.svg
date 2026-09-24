@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" width="500" height="200">
+  <!-- White background -->
+  <rect width="500" height="200" fill="white"/>
+  
+  <!-- W - clean, rounded, modern -->
+  <path d="M40,155 
+           L50,50 
+           Q65,50 70,75 
+           Q75,100 95,75 
+           Q115,50 130,50 
+           L140,155" 
+        fill="none" stroke="#1E40AF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- O - clean circle -->
+  <circle cx="205" cy="102" r="40" 
+          fill="none" stroke="#1E40AF" stroke-width="14"/>
+  
+  <!-- P as map pinpoint - classic teardrop with hole -->
+  <!-- Pin body -->
+  <path d="M285,155 
+           L285,80 
+           Q285,45 250,45 
+           Q215,45 215,80 
+           Q215,115 250,115 
+           Q285,115 285,80 Z" 
+        fill="#1E40AF"/>
+  <!-- Inner white circle (the classic map pin hole) -->
+  <circle cx="250" cy="72" r="18" fill="white"/>
+  <!-- Center accent dot -->
+  <circle cx="250" cy="72" r="5" fill="#1E40AF"/>
+
+</svg>

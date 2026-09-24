@@ -1,4 +1,4 @@
-export type DistanceUnit = 'km' | 'mi';
+export type DistanceUnit = "km" | "mi";
 
 export type WopSettings = {
   unit: DistanceUnit;
@@ -11,7 +11,7 @@ export type WopSettings = {
 };
 
 export const DEFAULT_SETTINGS: WopSettings = {
-  unit: 'km',
+  unit: "km",
   defaultRadiusMeters: 250,
   defaultDistanceMeters: 5000,
   soundEnabled: true,
